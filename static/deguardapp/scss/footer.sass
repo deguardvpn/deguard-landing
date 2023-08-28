@@ -1,0 +1,108 @@
+.footer__content__elipse
+    background: linear-gradient(84deg, #F54747 0%, rgba(242, 245, 71, 0.682292) 44.27%, rgba(123, 189, 71, 0.376217) 69.27%, rgba(99, 71, 245, 0) 100%)
+    mix-blend-mode: hard-light
+    opacity: 0.3
+    filter: blur(300px)
+    width: 950px
+    height: 865px
+    position: absolute
+    overflow: hidden
+    top: 108px
+    left: 330px
+
+.footer
+    width: 100vw    
+    border-top: 1px solid #272727
+    position: relative
+    overflow: hidden
+    padding-bottom: 54px    
+
+    @media (max-width: 768px)
+        padding-bottom: 40px    
+    
+    &__content
+        padding-top: 54px
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: 768px)
+            flex-direction: column
+            gap: 40px
+        
+        &__rigth-block
+            display: flex
+            flex-direction: row
+            gap: 120px
+
+            @media (max-width: 1280px)                        
+                gap: 9.375vw
+
+            @media (max-width: 1024px)                        
+                gap: 24px
+
+            @media (max-width: 460px)
+                flex-direction: column         
+            
+            &__item                               
+                @media (max-width: 768px)
+                    flex: auto
+                
+                &__list
+                    padding-top: 24px
+                    display: flex
+                    flex-direction: column 
+                    gap: 16px
+                    
+                    &__p
+                        font-family: 'Manrope'
+                        font-style: normal
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 25px
+                        color: white
+
+                        @media (max-width: 1024px)
+                            font-size: 14px
+                        
+                        @media (max-width: 375px)
+                            font-size: 18px
+                        
+        &__left-block
+            display: flex
+            flex-direction: column
+            gap: 24px
+
+            @media (max-width: 768px)
+                flex-direction: row
+                align-items: flex-start
+                justify-content: flex-start
+
+            @media (max-width: 460px)
+                flex-direction: column                                
+
+.footer-r
+    font-family: 'Manrope'
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 25px    
+    display: flex
+    align-items: flex-end
+    color: #FFFFFF
+
+    @media (max-width: 1024px)
+        font-size: 14px
+
+.footer-p
+    font-family: 'Manrope'
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 25px
+    display: flex
+    align-items: center
+    color: #FFFFFF
+    opacity: 0.45
+
+    @media (max-width: 1024px)
+        font-size: 14px

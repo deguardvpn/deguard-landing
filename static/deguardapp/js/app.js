@@ -1,3 +1,5 @@
+import { mobileMenuHandler } from './helpers.js'
+
 // Utility function
 function Util () {};
 
@@ -406,5 +408,18 @@ Math.easeInOutQuad = function (t, b, c, d) {
     };
 	}
 }());
+
+document
+  .querySelectorAll('.menu-btn')
+  .forEach(el => {
+    el.addEventListener('click', () => mobileMenuHandler())
+  })
+
+document
+  .querySelector('.mobile-menu__menu')
+  .querySelectorAll('a')
+  .forEach(el => {
+    el.addEventListener('click', () => mobileMenuHandler())
+  })
 
 console.log('asdoihjas;dhas;kdhas;kjdhas;kjdhas;kdhas')

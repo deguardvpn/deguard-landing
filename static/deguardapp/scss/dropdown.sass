@@ -1,0 +1,121 @@
+.dropdown
+    transition: 0.3s all
+    position: relative
+    &__wrapper
+        display: none
+        position: absolute
+        // transition: 1s all
+    
+        width: 96px
+        height: 96px
+        top: -20px
+        left: -82px
+
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 24px
+        transition: 0.5s
+        left: -3px
+        top: 81px
+        position: absolute
+        width: 176px
+        /* height: 48px; */
+        padding: 24px
+        z-index: -1
+        background: rgba(0, 0, 0, 0.9)
+        border-radius: 8px
+        opacity: 0
+        
+        
+        &__item
+            position: relative
+            z-index: 10
+            display: flex
+            align-items: center
+            gap: 16px
+
+        &__item a
+            font-family: "Manrope"
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 25px
+            text-align: right
+            color: #FFFFFF !important
+            transition: 0.5s all
+            user-select: none        
+        &__item a:hover
+            color: var(--orange-color) !important
+
+        &__item__circle
+            display: flex
+            align-items: center
+            justify-content: center
+            box-sizing: border-box
+            width: 48px
+            height: 48px
+            border-radius: 30px
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #2C2C2C
+        
+        &__item__circle img
+            width: 20px
+            height: 20px
+        
+
+.dropdown-community:hover .dropdown__wrapper_second
+    display: block
+
+.dropdown__wrapper_second:hover .dropdown__content_second
+    opacity: 1
+    transition: 0.7s all  
+    backdrop-filter: blur(10px)
+
+.dropdown__wrapper_second
+    /* display: none;
+    position: absolute
+    width: 96px
+    height: 96px
+    top: -20px
+    left: -116px
+    display: none
+    position: absolute
+    width: 98px
+    height: 96px
+    top: -20px
+    /* background-color: red; */
+    left: -98px
+
+.dropdown__wrapper_second:hover
+  display: block
+
+.dropdown__wrapper_second:hover .dropdown__content_second
+    opacity: 1
+    transition: 0.5s all  
+    backdrop-filter: blur(10px)
+
+.dropdown__content_second
+    display: flex
+    flex-direction: column
+    gap: 24px
+    transition: opacity 0.2s
+    left: -3px
+    top: 81px
+    position: absolute
+    width: 230px
+    /* height: 48px; */
+    padding: 24px
+    z-index: -1
+    background: rgba(0, 0, 0, 0.9)
+    border-radius: 8px
+    opacity: 0
+
+.dropdown-about:hover .dropdown__wrapper
+    display: block
+
+.dropdown__wrapper:hover .dropdown__content,
+.dropdown__wrapper:hover .dropdown__content_second
+    // display: block
+    opacity: 1
+    transition: 0.3s all
+    backdrop-filter: blur(10px)              

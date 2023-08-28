@@ -1,0 +1,1138 @@
+@import "normalizez.scss"
+@import "resets.scss"
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap')
+@import "./fonts.scss"
+
+// Blocks
+@import './introducing.sass'        
+@import './header.sass'        
+@import './dropdown.sass'        
+@import './store-btn.sass'
+@import './menu.sass'
+@import './solution.sass'
+@import './card-anim-scroll.sass'
+@import './payment.sass'
+@import './how-it-works.sass'
+@import './network.sass'
+@import './footer.sass'
+@import './section-title.sass'
+@import './block-title.sass'
+@import './nft-plan.sass'
+@import './mobile-menu.sass'
+
+:root
+    --bg-color: #000000
+    --nav-text-color: #EEEEEE
+    --nav-bg-color: #000000
+    --orange-color: #FF9F2E
+
+        
+[class*="__container"]
+    width: 1320px
+    padding: 0px 15px 0px 15px
+    margin: 0 auto
+
+*
+    box-sizing: border-box
+
+body
+    background-color: var(--bg-color)
+    font-family: 'Manrope', sans-serif    
+    margin: 0
+    padding: 0
+
+p, h1, h2, img
+    margin: 0
+    padding: 0
+    user-select: none
+a
+    text-decoration: none
+    color: var(--nav-text-color)
+
+html
+    scroll-behavior: smooth
+    overflow-x: hidden
+
+::-webkit-scrollbar
+    // background-color: none
+    display: none
+
+.filter
+    backdrop-filter: blur(10px) !important
+
+.fixed
+    position: fixed
+
+.wrapper
+    width: 100%
+    max-width: 1320px
+    padding: 0 40px
+    margin: 0 auto
+
+    @media (max-width: 375px)
+        padding: 0 32px    
+
+.INTRODUCING
+    top: -130px
+    // left: 10
+    position: absolute
+
+.con1-avtive, .con2-avtive
+    transition: 1s all
+    opacity: 1 !important
+
+// DeGuadConnection
+.deconn
+    transition: 1s all
+    top: 98px
+    left: -379px
+    position: absolute
+    opacity: 0
+
+.deconn-active
+    opacity: 1 !important
+
+// LINE TO META MASK
+.deconn-line
+    transition: 1s all
+
+    // top: -183px
+    // left: -557px
+    top: -166px
+    left: -507px
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.deconn-line-active
+    opacity: 1 !important
+
+
+// CONNECTION SUCCSEC
+.deconn-connection
+    transition: 1s all
+    position: absolute
+    // top: 130px
+    // left: -546px
+    top: 153px
+    left: -490px
+    
+    opacity: 0
+
+.deconn-connection-active
+    opacity: 1 !important
+    
+
+
+
+// DeGuadConnection COPY
+.deconn2
+    position: absolute    
+    transition: 1s all
+    // top: -222px
+    // left: 673px
+
+    top: -182px
+    left: 616px
+
+    opacity: 0
+
+.deconn2-active
+    opacity: 1 !important
+// LINE COPY
+
+.deconn-line2
+    transition: 1s all
+    position: absolute
+    // top: -173px
+    // left: 572px
+    z-index: -1
+
+    top: -135px
+
+    width: 289px
+    height: 180px
+
+    left: 445px
+
+    transform: rotate(6deg)
+    opacity: 0
+
+.deconn-line2-active
+    opacity: 1 !important
+
+
+.deconn-connection2
+    transition: 1s all
+    position: absolute
+    // top: -191px
+    // left: 686px
+    top: -191px
+    left: 500px
+    opacity: 0
+
+.deconn-connection2-active
+    opacity: 1 !important
+
+
+.header__decor-elements
+    position: absolute
+    &__item svg
+        transition: 1s all
+    &__item
+        &:nth-child(1)
+            position: absolute            
+            top: 245px
+            left: 100px
+            opacity: 0
+        &:nth-child(2)
+            position: absolute            
+            top: -244px
+            left: 406px
+            opacity: 0
+
+.heading
+   font-family: "Manrope"
+   font-style: normal
+   font-weight: 700
+   line-height: 119.4%
+   text-align: center
+   color: #FFFFFF
+   text-shadow: 0px 0px 21px rgba(255, 255, 255, 0.49)
+
+.more_a
+    display: inline
+    margin: 0
+    padding: 0
+
+    
+.menu-btn
+    display: none
+
+    @media (max-width: 960px)
+        position: relative
+        z-index: 2
+        display: flex
+        opacity: 1
+        width: 24px
+        height: 24px        
+        justify-content: space-between
+        flex-direction: column
+        
+        &__item
+            height: 2px 
+            background-color: white
+            width: 46px  
+    
+
+.mark
+    font-weight: 700
+    color: #FF9F2E
+
+.menu_second_btn
+    min-width: 309px
+    margin-bottom: 24px    
+
+.mobile__wrapper
+    display: none
+
+
+.bounce-1 
+    animation-name: bounce-1
+    animation-timing-function: linear
+
+@keyframes bounce-1 
+    0%   
+        transform: translateY(0)
+    50% 
+        transform: translateY(-30px)
+    100%
+        transform: translateY(0)    
+
+.p_shadow    
+    text-shadow: 0px 0px 23px #FF9F2E
+    line-height: 25px
+    font-size: 18px
+    align-items: center
+    font-style: normal
+    font-weight: 500
+    font-family: 'Navigo', sans-serif
+
+    @media (max-width: 375px)
+        font-size: 12px
+
+.p_orange
+    color: var(--orange-color)
+
+.second_block_buttons
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 8px
+    height: 100px
+    position: relative
+    
+.buy_button
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 12px 24px
+    
+    width: 103px
+    height: 49px    
+    background: #FF9F2E
+    border-radius: 43px
+    position: relative
+    transition: 0.5s all
+
+.sell_button
+    padding: 12px 24px
+    gap: 10px
+    
+    width: 77px
+    height: 39px
+
+    background: #F1103B
+    opacity: 0.67
+    box-shadow: 0px 4px 30px rgba(241, 16, 59, 0.6)
+    border-radius: 43px
+
+    position: relative
+
+    transition: 0.5s all
+
+
+button
+    decoration: none
+    border: none
+    
+.fist_btn
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(267.74deg, #FFC700 5.99%, #E43086 114.38%), #00AEEF
+    border-radius: 43px
+    width: 136px
+    height: 44px
+    padding: 10px 16px
+    display: flex
+    align-items: center
+    gap: 5px
+    color: white
+    cursor: pointer
+
+.second_btn
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(267.74deg, #FFC700 5.99%, #E43086 114.38%), #00AEEF
+    border-radius: 43px
+    width: 136px
+    height: 44px
+    padding: 10px 16px
+    display: flex
+    align-items: center
+    gap: 5px
+    color: white
+    cursor: pointer
+
+.work_flow
+    min-height: 873px
+    padding-top: 84px
+    
+    &__container > h1
+        font-size: 48px        
+        margin-bottom: 48px
+    
+    &__container
+        display: flex
+        align-items: center
+        flex-direction: column
+    
+    &__switch-buttons
+        width: 294px
+        height: 56px 
+        background-color: #3D2E20
+        border-radius: 48px
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+.meta
+    transform: translate(-130px, -148px)
+
+.wg 
+    transform: translate(121px, -164px)
+
+.boat
+    transform: translate(221px, 0px)
+
+.circle
+        transform: translate(-192px, 67px)
+
+.wawe
+    transform: translate(167px, 129px)
+
+.binance
+    transform: translate(-122px, 182px)
+
+.intr_p h4
+    margin-bottom: 12px
+
+.intr_p > p
+    margin-bottom: 32px    
+
+    @media (max-width: 375px)
+        margin-bottom: 16px        
+
+.intro_elipse
+    width: 950px
+    height: 865px
+    background: linear-gradient(187deg, rgba(245, 71, 71, 0.5607843137) 0%, rgba(242, 245, 71, 0.682292) 44.27%, rgba(123, 189, 71, 0.7) 69.27%, rgba(99, 71, 245, 0) 100%)
+    position: absolute
+    z-index: -3    
+    opacity: 0.3
+    filter: blur(306px)
+    top: -93px
+
+.img-fist-cercle_meta, .img-fist-cercle_wg, .img-fist-cercle_boat, .img-fist-cercle_circle, .img-fist-cercle_wawe
+    position: absolute
+    z-index: 1
+    transition: 1s all      
+
+.img-fist-cercle_binance
+    position: absolute
+    z-index: -1
+    transition: 1s all
+
+.box
+    display: flex
+    align-items: center
+    justify-content: center
+
+.orange-gradient   
+    background: linear-gradient(266.69deg, #FFC700 3.21%, #E43086 131.16%), #FF9F2E
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+
+.defautl_p
+    font-family: 'Manrope'
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 1.4
+    color: #D2D2D2
+
+    @media (max-width: 1280px)
+        font-size: 18px
+
+    @media (max-width: 1024px)
+        font-size: 16px
+
+    @media (max-width: 375px)
+        font-size: 14px
+
+    & > b
+        font-weight: 400
+
+        @media (max-width: 375px)
+            font-weight: 600 
+                
+.mech1
+    margin-bottom: 40px
+.mechp
+    margin-bottom: 15px
+.mechp2
+    margin-bottom: 32px
+.mechp3
+    font-weight: 300
+
+.card-anim
+    position: relative
+    width: 300px
+    height: 474px
+    transition: transform 1s
+
+    @media (max-width: 1024px)
+        transform-origin: left center
+        transform: scale(.7) translateX(100%)
+
+    @media (max-width: 768px)        
+        transform: scale(.5) translateX(100%)    
+        height: 400px        
+
+    @media  (max-width: 375px)
+        transform-origin: left top
+        transform: scale(.4) translateX(100%)    
+        height: 250px    
+    
+    & img
+        position: absolute
+        
+        &:nth-child(1)
+            z-index: 3
+            transition: 1s all
+        
+        &:nth-child(1) 
+            z-index: 3
+            transition: 1s all
+        
+        &:nth-child(2)
+            top: 54px
+            left: 16px
+            z-index: 2    
+            transition: 1s all
+        
+        &:nth-child(3)
+            z-index: 1
+            top: 118px
+            left: 21px
+            transition: 1s all
+
+.card-1-a
+    transform: translate(0px, -60px)
+.card-2-a            
+    transform: translate(0px, -35px)
+
+.card-anim-active:nth-child(1)
+    transform: translate(10px, 10px)
+
+.iphone13
+    position: absolute
+    // top: 30px !important
+    left: -134px
+    z-index: -1
+    width: 194px
+    height: 516px
+    transition: 1s all
+    background-image: url('../img/icons/iPhone 13 Pro.png')
+
+.iphone13-a
+    transform: translate(0px, -130px)
+    z-index: -1
+
+.card-anim-scroll img
+    transition: 1.5s all
+            
+// DECOR ITEMS //
+
+.usd-active
+    opacity: 1 !important          
+
+.avax
+    top: 127px
+    left: 127px
+    transition: 1s all
+    opacity: 0
+
+.avax-active
+    opacity: 1 !important
+    transform: translate(79px, -81px) !important
+
+.bnb
+    top: 73px
+    left: 80px
+    transform: rotate(354deg)
+    transition: 1s all
+    opacity: 0
+
+.bnb-active
+    opacity: 1 !important
+    transform: translate(-20px, -107px)
+
+.eth
+    top: 78px
+    left: 82px
+    opacity: 0
+    
+.eth-active
+    opacity: 1 !important        
+    transform: translate(-67px, 120px) !important
+
+.spinner
+    position: absolute
+    top: 49px
+    left: 53px
+    transition: 1.5s all
+
+.spinner-active    
+    transform: translate(15px, -3px) rotate(30deg)
+    
+.mech33
+    font-family: 'Manrope'
+    font-style: normal
+    font-weight: 700
+    font-size: 40px
+    line-height: 55px
+    margin-bottom: 32px    
+
+.card
+    display: flex
+    align-items: center
+    gap: 40px
+    width: 100%    
+    border: 1px solid rgba(55, 55, 55, 0.3)
+    box-shadow: 0px 0px 68px rgba(0, 0, 0, 0.6)
+    border-radius: 20px    
+    padding: 36px
+
+    @media (max-width: 375px)
+        gap: 0
+        padding: 28px
+
+    &__image        
+        @media (max-width: 1024px)
+            display: none        
+
+.wire-guard
+    display: flex
+    align-items: center
+    gap: 8px
+    color: #FF3535
+
+    @media (max-width: 375px)
+        justify-content: center
+        text-align: center
+
+.first-card__list
+    display: flex
+    gap: 32px
+    flex-direction: column
+
+    @media (max-width: 375px)
+        gap: 12px
+    
+    &:nth-child(3)
+        margin-bottom: 40px
+
+        @media (max-width: 375px)
+            margin-bottom: 24px
+        
+    &__item p
+        font-family: 'Manrope'
+        font-style: normal
+        font-weight: 500
+        font-size: 24px
+        line-height: 1.375
+        color: #FFFFFF
+
+        @media (max-width: 375px)
+            font-size: 14px
+    
+    &__item
+        display: flex
+        align-items: center
+
+        &_protect
+            display: flex
+            flex-direction: column     
+            align-items: flex-start
+            gap: 14px
+            padding-bottom: 16px  
+
+            @media (max-width: 375px)
+                align-items: center     
+
+            & p 
+                font-size: 18px
+
+                @media (max-width: 375px)
+                    font-size: 14px
+                    text-align: center
+        
+        &__circle
+            display: flex
+            text-align: center
+            align-items: center
+            justify-content: center
+            flex: none
+            width: 32px
+            height: 32px
+            background: #281B0C
+            border-radius: 50px
+            font-family: 'Manrope'
+            font-style: normal
+            font-weight: 700
+            font-size: 16px
+            line-height: 22px
+            color: #FFFFFF
+            margin-right: 10px
+
+.btn-wrapper
+    display: flex
+    gap: 32px
+
+.mb-section
+    margin-bottom: 38px
+
+    @media (max-width: 375px)
+        text-align: center
+        margin-bottom: 24px
+
+.platform
+    display: flex
+    flex-wrap: wrap
+    gap: 16px
+    max-width: 422px
+
+    @media (max-width: 375px)
+        justify-content: center
+        gap: 8px
+    
+    &__item    
+        height: 57px
+        padding: 12px 16px
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        display: flex
+        gap: 6px        
+        border-radius: 30px
+        background: rgba(255, 255, 255, 0.05)
+        font-family: 'Manrope'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 25px
+        color: white
+
+        @media (max-width: 375px)
+            font-size: 14px
+
+.card__wrapper
+    display: flex
+    flex-direction: column
+
+    &_centered
+        @media (max-width: 375px)                            
+            align-items: center
+
+            & .section-title
+                text-align: center
+
+.desctop-mobile-img
+    position: relative
+
+.desctop-mobile-img img
+    position: absolute
+    
+.img1
+    bottom: 10px
+    left: 191px
+.img2
+    top: -74.5px
+    left: 429px
+
+
+#third-card
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
+    flex-direction: column
+    box-sizing: border-box
+
+
+.mech44
+    font-family: "Manrope"
+    font-style: normal
+    font-weight: 700
+    font-size: 40px
+    line-height: 55px
+    margin-bottom: 17px
+
+.mb55
+    margin-bottom: 32px
+
+.how-it-works__content__first-card__wrapper3
+    display: flex
+    flex-direction: column
+
+.add_place
+    height: 25vh
+
+.soon_div
+    color: #FF9F2E
+    font-family: Manrope
+    font-size: 11px
+    font-style: normal
+
+    font-weight: 600
+    line-height: 20px
+
+    display: flex
+    height: 20px
+    width: 40px
+    align-items: center
+    padding: 0px 6px
+    align-items: center
+    gap: 4px
+    border-radius: 26px
+    background: linear-gradient(332deg, rgba(228, 48, 134, 0.16) 0%, rgba(255, 199, 0, 0.16) 100%)
+
+
+.soon_div_item
+    display: flex
+    gap: 6px
+
+.soon_div_item a
+    opacity: 0.5
+    cursor: not-allowed
+
+.menu__mobile
+    display: none
+
+.header__content__learn_more-mobile
+    display: none
+
+// @media screen and (max-width: 1350px)
+//     [class*=__container]
+//         width: 1226px
+//     .card
+//         width: 1195px
+//     .networks__cards
+//         gap: 14px
+
+//     .img1
+//         bottom: 10px
+//         left: 108px
+
+//     .img2 
+//         top: -74.5px
+//         left: 341px
+    
+//     .deconn-line
+//         transition: none
+
+// @media screen and (max-width: 1250px)
+//     [class*=__container]
+//         width: 1150px
+
+//     .img1
+//         bottom: 10px
+//         left: 50px
+//     .img2
+//         top: -74.5px
+//         left: 274px
+
+//     .card 
+//         width: 1125px
+
+//     .networks__cards__item 
+//         width: 255.5px
+//         height: 265px   
+
+//     .deconn-line2
+//         top: -117px
+//         width: 213px
+//         height: 153px
+//         left: 258px
+//         transform: rotate(8deg)
+//     .deconn2 
+//         top: -130px
+//         left: 367px
+//         height: 62px
+//         width: 100px
+
+//     .deconn-connection2
+//         top: -103px
+//         left: 440px
+//         width: 66px
+//     .deconn
+//         top: 27px
+//         left: -379px
+//         height: 73px
+
+//     .deconn-line
+//         top: -129px
+//         // left: -478px
+//         left: -484px
+//         height: 195px
+//         transform: rotate(353deg)
+//         transition: none
+
+//     .deconn-connection 
+//         // top: 126px
+//         top: 73px
+//         left: -447px
+//         width: 95px       
+
+//     .header__decor-elements__item:nth-child(1)
+//         top: 203px
+//         left: 18px
+//         opacity: 0
+
+//     .header__decor-elements__item:nth-child(2) 
+//         top: -223px
+//         left: 214px
+
+//     .card-anim
+//         width: 267px
+//         height: 447px
+//     .iphone13
+//         left: -111px
+//         width: 194px
+//         height: 516px
+//     .payment__group-usd__item:nth-child(1)
+//         top: -139px
+//         left: -211px
+//         transform: rotate(2deg)
+
+//     .menu__mobile
+//         display: none
+    
+//     .header__content__learn_more-mobile
+//         display: none
+
+// @media screen and (max-width: 1189px)
+//     [class*=__container]
+//         width: 823px
+
+//     .header__decor-elements 
+//         display: none
+   
+//     .header__content
+//         background-size: 1228px
+//         background-position-x: center
+
+//     .menu__item
+//         padding: 4px 13px
+
+//     .orange-gradient
+//         font-size: 24px
+
+//     .defautl_p
+//         font-size: 18px
+//     // DECOR ELEMENT
+//     .box
+//         left: -34px
+//         position: relative
+
+//     img.img-fist-cercle_meta.meta 
+//         height: 100px
+
+//     .meta
+//         transform: translate(-94px, -101px)
+
+
+//     img.img-fist-cercle_wg 
+//         height: 56px
+//     .wg
+//         transform: translate(79px, -111px)
+
+//     img.img-fist-cercle_boat
+//         height: 67px
+
+//     .boat
+//         transform: translate(147px, 1px)
+
+
+//     img.img-fist-cercle_wawe
+//         height: 46px
+//     .wawe
+//         transform: translate(94px, 110px)  
+
+//     img.img-fist-cercle_binance 
+//         height: 67px
+
+//     .binance
+//         transform: translate(-61px, 141px)
+
+//     img.img-fist-cercle_circle
+//         height: 50px
+
+//     .circle
+//         transform: translate(-130px, 42px)
+
+//     .card-anim
+//         left: 83px
+    
+//     .card-anim img:nth-child(1) 
+//         height: 300px
+//         top: 102px
+//         left: 31px
+//     .card-anim img:nth-child(2)
+//         top: 130px
+//         left: 34px
+//         height: 300px
+//     .card-anim img:nth-child(3)
+//         top: 172px
+//         left: 44px
+//         height: 270px
+
+
+//     .card-anim-scroll__btn-wrapper
+//         top: 55px
+//         right: -41px
+
+//     .card-anim-scroll__buy-btn 
+//         width: 106px
+//         display: flex
+//         height: 54px
+//         right: 279.6px
+//         top: calc(50% - 37.5px + 175.34px)
+//         border-radius: 43px
+//         font-size: 20px
+//         line-height: 22px
+//         color: #FFFFFF
+//         align-items: center
+//         justify-content: center
+
+//     .card-anim-scroll__sell-btn
+//         width: 84px
+//         display: flex
+//         height: 47px
+//         top: calc(50% - 29.5px + 224.34px)
+//         background: #F1103B
+//         box-shadow: 0px 4px 30px rgba(241, 16, 59, 0.6)
+//         border-radius: 43px
+//         right: 253.60000000000002px
+//         font-size: 19px
+//         line-height: 30px
+//         display: flex
+//         align-items: center
+//         /* text-align: right; */
+//         color: #FFFFFF
+//         justify-content: center
+
+//     .iphone13
+//         position: absolute
+//         left: -85px
+//         background-image: url('../img/icons/iPhone 13 Pro.png')
+//         background-size: 69%
+//         background-repeat: no-repeat
+//         top: 215px
+//     .iphone13-a 
+//         transform: translate(0px, -274px)
+//         z-index: -1
+
+//     .card-anim-scroll
+//         height: 309px
+//         width: 309px
+//         top: 176px
+//         left: -55px
+
+//     .card-anim-scroll__btn-wrapper
+//         top: 61px   
+//         right: -41px
+
+//     .defautl_p 
+//         font-size: 17px
+
+//     .payment__content__decor-circle__big-circle
+//         width: 320px
+//         height: 320px
+
+//     .img1 
+//         bottom: 10px
+//         left: -95px
+//         height: 215px
+//     .img2 
+//         top: -36.5px
+//         left: 66px
+//         height: 419px
+//     .menu__mobile
+//         display: none
+
+//     .header__content__learn_more-mobile
+//         display: none
+
+// @media screen and (max-width: 946px)
+//     .header__content
+//         background-size: 125vw
+
+//     .header__content__learn_more
+//         display: none
+
+//     .menu__mobile
+//         display: block
+
+//     [class*="__container"]
+//         width: 86vw
+//         margin: 0 auto
+//         padding: 0px 5px 0px 5px
+
+//     .menu__menu
+//         display: none
+
+//     .header__navigation
+//         width: 100%
+//         border-bottom: 1px solid #272727
+//         background: rgba(0, 0, 0, 0.01)
+//         position: fixed
+//         top: 0
+//         z-index: 100                    
+
+//     .menu__btn-mobile > p 
+//         font-style: normal
+//         font-weight: 700
+//         font-size: 17px
+//         line-height: 25px
+
+//     .mobile-wrapper
+//         display: flex
+//         justify-content: space-between
+//         align-items: center
+//         gap: 21px
+
+//     .menu__btn-mobile
+//         display: flex
+//         flex-direction: row
+//         justify-content: center
+//         align-items: center
+    
+//         position: relative
+        
+//         width: 129px
+//         height: 41px
+//         top: 0px
+//         background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(267.74deg, #FFC700 5.99%, #E43086 114.38%)
+//         box-shadow: 0px 0px 24px rgba(244, 100, 66, 0.35)
+//         border-radius: 50px
+//         overflow: hidden
+    
+//     .menu__button
+//         display: flex         
+        
+//     .menu__button__soon
+//         isplay: flex
+//         flex-direction: row
+//         justify-content: center
+//         align-items: center
+
+//         gap: 10px
+//         position: absolute
+//         width: 135px
+//         height: 19px
+
+//         top: 9px
+//         right: -40.67px
+//         background: #FFFFFF
+//         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.08)
+//         transform: rotate(33deg)
+//         color: black
+
+//         font-style: normal
+//         font-weight: 700
+//         font-size: 12px
+//         line-height: 16px   
+
+
+//    
+//               
+
+//     .header__content__learn_more-mobile
+//         display: flex
+//         align-items: center
+//         justify-content: center
+//         flex-direction: column
+//         position: relative
+//         bottom: -27vh              
+
+   
+    
+//     .binance
+//         transform: translate(-54px, 115px)
+
+//     .nft-plan__content 
+//         display: flex
+//         justify-content: space-between
+//         position: relative
+//         flex-direction: column-reverse

@@ -1,0 +1,45 @@
+.nft-plan    
+    border-bottom: 1px solid #272727
+    display: flex
+    align-items: center
+    position: relative
+    overflow: hidden
+    padding: 124px 0 145px
+
+    @media (max-width: 1024px)
+        padding: 40px 0 80px
+    
+    @media (max-width: 375px)
+        padding: 60px 0 40px
+    
+    &__content
+        display: flex
+        justify-content: space-between  
+        position: relative
+
+        @media (max-width: 1024px)
+            flex-direction: column-reverse        
+        
+        &__text
+            display: flex
+            flex-direction: column
+            gap: 40px
+
+            @media (max-width: 375px)
+                gap: 16px
+    
+    &__text-block              
+        display: flex
+        flex-direction: column
+        gap: 32px
+        max-width: 415px
+
+        @media (max-width: 375px)
+            gap: 16px
+
+        .defautl_p
+            @media (min-width: 1281px)
+                font-size: 18px                        
+
+.ntf-elipse
+    top: 59px

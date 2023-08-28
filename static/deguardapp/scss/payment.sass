@@ -1,0 +1,103 @@
+.payment    
+    display: flex
+    border-bottom: 1px solid #272727
+    align-items: center    
+    overflow: hidden
+    padding: 195px 0
+    margin-bottom: 160px
+
+    @media (max-width: 768px)
+        padding: 20px 0 80px
+
+    @media (max-width: 375px)
+        padding: 24px 0 54px
+        margin-bottom: 32px
+    
+    &__content    
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 200px
+        position: relative
+
+        @media (max-width: 1280px)
+            gap: 15.625vw
+        
+        @media (max-width: 1024px)
+            flex-direction: column
+            align-items: flex-start
+            gap: 60px
+
+        &__text
+            display: flex
+            flex-direction: column
+            gap: 40px
+
+            @media (max-width: 375px)
+                gap: 16px
+        
+        &__decor-circle
+            transition: transform 1s
+            transform-origin: left bottom
+
+            @media (max-width: 768px)
+                transform: scale(.9)
+
+            @media (max-width: 375px)
+                transform: scale(.7)
+                height: 200px
+                padding-bottom: 100px
+
+            &__big-circle
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 376px
+                height: 376px
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(343.54deg, #000000 5.18%, #D59851 221.13%)                
+                border-radius: 300px
+            
+            &__small-circle
+                display: flex
+                align-items: center
+                position: relative
+                z-index: 5
+                justify-content: center
+                width: 240px
+                height: 240px
+                border-radius: 300px
+                background: linear-gradient(326.85deg, #D59851 -141.1%, #000000 76.61%)
+
+    &__group-usd
+        position: relative
+        z-index: -1
+        top: 0px        
+        opacity: 0
+        transition: 1.5s all
+    
+        &__item
+            position: absolute
+            &:nth-child(1)
+                top: -152px
+                left: -236px
+                transform: rotate(2deg)
+            &:nth-child(2)
+                top: -194px
+                left: 39px
+                transform: rotate(358deg)
+            &:nth-child(3)
+                top: 41px
+                left: -218px
+                transform: rotate(5deg)
+            &:nth-child(4)
+                top: 146px
+                left: -10px
+                transform: rotate(357deg)
+            &:nth-child(5)
+                top: 50px
+                left: 130px
+                transform: rotate(20deg)      
+
+    &__group img
+        transition: 1s all 
+        position: absolute  

@@ -1,0 +1,105 @@
+.solution
+    color: white
+    &__container
+        min-height: 600px
+        padding-top: 80px       
+        border-bottom: 1px solid #3C2913 
+    &__container > h1
+        font-size: 48px
+        margin-bottom: 16px
+    &__container > p
+        font-size: 18px
+        line-height: 25px
+        color: #D8D8D8
+        text-align: center
+        padding-bottom: 40px    
+    &__fist_block
+        display: flex
+        justify-content: space-between         
+        margin-bottom: 24px
+        &__item img
+            transition: 0.5s all
+            
+        &__item
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding: 32px 24px
+            gap: 24px            
+
+            height: 139px
+            transition: 0.5s all
+
+            border-radius: 20px                      
+            transition-duration: 0.5s
+            -webkit-transition-duration: 0.3s
+            -webkit-transition-property: color, background-color
+            transition-property: color, background-color
+            &:nth-child(1)
+                width: 439px                
+                background: radial-gradient(76.58% 74.58% at 11.7% 74.58%, rgba(252, 83, 255, 0.105) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(264.65% 232.78% at 63.55% 59.36%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+                box-shadow: 0px 0px 68px rgba(0, 0, 0, 0.6)                
+
+            &:nth-child(1):hover
+                background: radial-gradient(91.01% 285.07% at 34.6% 56.47%, rgba(252, 83, 255, 0.105) 2.73%, rgba(0, 0, 0, 0) 82.02%), radial-gradient(264.65% 232.78% at 63.55% 59.36%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%), rgba(255, 255, 255, 0.01)            
+            &:nth-child(1):hover img
+                transform: rotate(-13deg)
+                
+
+            &:nth-child(2)
+                width: 425px
+                background: radial-gradient(68.71% 78.58% at 24.55% 33.89%, rgba(252, 83, 255, 0.105) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(157.35% 180.89% at 78.75% 25.1%, rgba(255, 140, 5, 0.056) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)       
+            &:nth-child(2):hover
+                background: radial-gradient(122.82% 144.16% at 24.55% 33.89%, rgba(252, 83, 255, 0.105) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(157.35% 180.89% at 78.75% 25.1%, rgba(255, 140, 5, 0.056) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+            &:nth-child(2):hover img
+                transform: rotate(45deg)
+
+            &:nth-child(3)
+                width: 424px      
+                background: radial-gradient(104.95% 272.64% at 33.19% 44.82%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(100.12% 78.65% at 76.08% 23.91%, rgba(252, 83, 255, 0.07) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)          
+            &:nth-child(3):hover
+                background: radial-gradient(104.95% 272.64% at 33.19% 44.82%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(153.36% 157.91% at 68.28% 0%, rgba(252, 83, 255, 0.07) 20.33%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+            &:nth-child(3):hover img
+                transform: scale(1.2)
+
+
+    &__second_block
+        display: flex
+        align-items: center
+        justify-content: center
+
+        gap: 24px
+        &__item
+            display: flex
+            align-items: center
+            padding: 36px 32px        
+
+            width: 648.5px
+            height: 139px
+
+            border: 1px solid rgba(55, 55, 55, 0.3)
+            box-shadow: 0px 0px 68px rgba(0, 0, 0, 0.6)
+            border-radius: 20px
+            &:nth-child(1)
+                display: flex
+                justify-content: space-between    
+                background: radial-gradient(109.82% 351.71% at 9.33% 29.48%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(269.15% 1382.15% at 84.79% 32.52%, rgba(245, 71, 144, 0.104) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+                transition: 0.5s all
+            &:nth-child(1):hover
+                background: radial-gradient(109.82% 351.71% at 9.33% 29.48%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(221.07% 301.52% at 84.79% 32.52%, rgba(245, 71, 144, 0.104) 27.7%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+                transform: translate(-130deg)
+            &:nth-child(1) img
+                transition: 0.5s all
+            &:nth-child(1):hover img
+                transform: scale(1.1)
+            
+            &:nth-child(2)
+                display: flex
+                justify-content: space-between          
+                background: radial-gradient(109.82% 351.71% at 9.33% 29.48%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(269.15% 1382.15% at 84.79% 32.52%, rgba(245, 71, 144, 0.104) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+            &:nth-child(2):hover
+                background: radial-gradient(76.92% 168.78% at 57.72% 13.67%, rgba(255, 140, 5, 0.08) 0%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(160.62% 1792.23% at 26.29% 78.42%, rgba(245, 71, 144, 0.104) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.01)
+            &:nth-child(2):hover .buy_button
+                position: relative
+            &:nth-child(2):hover .sell_button
+                position: relative
