@@ -9,6 +9,7 @@
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -597,7 +598,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 180px;
+  gap: 240px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1720,6 +1721,10 @@ table {
   margin-bottom: 160px;
 }
 
+.how-it-works .wrapper {
+  padding: 0;
+}
+
 .how-it-works__content {
   min-height: 1317px;
   display: -webkit-box;
@@ -1749,6 +1754,11 @@ table {
   background: radial-gradient(109.82% 351.71% at 9.33% 29.48%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%), radial-gradient(69.69% 168.46% at 89.37% 86.93%, rgba(245, 71, 144, 0.104) 2.73%, rgba(0, 0, 0, 0) 82.02%), #000000;
   position: sticky;
   top: 160px;
+}
+
+.how-it-works__content__first-card .card__wrapper_card-2 {
+  width: 70%;
+  gap: 0;
 }
 
 .how-it-works__content__first-card__list {
@@ -2003,7 +2013,14 @@ table {
 
 .section-title_small {
   font-size: 40px;
+  font-weight: 600;
   margin-bottom: 32px;
+}
+
+.section-title .emoji {
+  position: relative;
+  bottom: -10px;
+  width: 72px;
 }
 
 .block-title {
@@ -2689,7 +2706,7 @@ button {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   color: #D2D2D2;
 }
@@ -2926,7 +2943,7 @@ button {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.375;
   color: #FFFFFF;
 }
@@ -3004,7 +3021,6 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 16px;
-  max-width: 422px;
 }
 
 .platform__item {
@@ -3157,6 +3173,15 @@ button {
   }
 }
 
+@media (min-width: 1323px) {
+  .how-it-works__content__first-card .card__wrapper_card-2 .section-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
+}
+
 @media (min-width: 1441px) {
   .header__supported-logo {
     height: 40px;
@@ -3188,16 +3213,16 @@ button {
     font-size: 5.625vw;
   }
 
+  .section-title .emoji {
+    width: 5.625vw;
+  }
+
   .block-title {
     font-size: 2.2vw;
   }
 
   .block-title::before {
     width: 3.9vw;
-  }
-
-  .defautl_p {
-    font-size: 18px;
   }
 }
 
@@ -3517,6 +3542,11 @@ button {
     font-size: 36px;
   }
 
+  .section-title .emoji {
+    width: 36px;
+    bottom: -5px;
+  }
+
   .block-title {
     font-size: 28px;
   }
@@ -3595,6 +3625,10 @@ button {
   .section-title_small {
     font-size: 24px;
     margin-bottom: 20px;
+  }
+
+  .section-title .emoji {
+    width: 24px;
   }
 
   .block-title {

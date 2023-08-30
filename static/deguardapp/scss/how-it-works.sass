@@ -7,6 +7,9 @@
     @media (max-width: 375px)
         margin-bottom: 45px    
     
+    & .wrapper
+        padding: 0
+
     &__content        
         min-height: 1317px
         display: flex        
@@ -21,6 +24,15 @@
             background: radial-gradient(109.82% 351.71% at 9.33% 29.48%, rgba(255, 140, 5, 0.08) 5.43%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(69.69% 168.46% at 89.37% 86.93%, rgba(245, 71, 144, 0.104) 2.73%, rgba(0, 0, 0, 0) 82.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #000000            
             position: sticky                        
             top: 160px
+
+            & .card__wrapper_card-2
+                width: 70%
+                gap: 0
+
+                & .section-title
+                    @media (min-width: 1323px)                        
+                        display: flex
+                        gap: 12px                    
 
             &__list
                 display: flex
