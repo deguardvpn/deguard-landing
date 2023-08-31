@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>DeGuardVPN</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />   
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />  
     <link rel="stylesheet" href='/static/deguardapp/css/style.css' />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/static/deguardapp/img/icons/fovicon/apple-touch-icon.png" />
@@ -15,20 +17,7 @@
 </head>
 
 <body>
-    <div class="mobile-menu">
-        <div class="mobile-menu__header">
-            <div class="mobile-menu__wrapper">
-                <div class="mobile-menu__header-cnt">
-                    <img class="mobile-menu__logo" src="/static/deguardapp/img/header_logo.png" alt="Logo">
-                    <a href="https://app.deguard.io/" class="header__menu-button menu__button">
-                        Enter dApp
-                    </a>
-                    <div class="menu-btn">
-                        <img src="/static/deguardapp/img/mobile-menu-close.svg" alt="">
-                    </div>
-                </div>
-            </div>            
-        </div>        
+    <div class="mobile-menu">        
         <nav class="mobile-menu__menu">
             <ul>
                 <li>
@@ -104,7 +93,7 @@
                                         <div class="dropdown__content__item"> 
                                             <a href="https://twitter.com/DeGuardVPN" target="_blank">
                                                 <span class="dropdown__content__item__circle"><img src="/static/deguardapp/img/icons/social_svg/tw.svg"></span>
-                                                <a href="https://twitter.com/DeGuardVPN" target="_blank">Twitter</a>
+                                                <a href="https://twitter.com/DeGuardVPN" target="_blank">X</a>
                                             </a>
                                         </div>
                                         
@@ -134,7 +123,9 @@
                 </a>
 
                 <div class="menu-btn">
-                    <img src="/static/deguardapp/img/mobile-menu-icon.svg" alt="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -411,7 +402,7 @@
                             </div>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="menu__button how-it-work-btn" href="">Try it</a>                           
+                            <a class="menu__button how-it-work-btn" href="https://app.deguard.io/" target="_blank">Try it</a>                           
                         </div>
                     </div>
                     <img class="card__image" src="/static/deguardapp/img/privacy-image.svg" style="opacity: .15;" alt="" />
@@ -635,7 +626,7 @@
                         <p class="p_shadow p_orange fmb24">COMMUNITY</p>
 
                         <div class="footer__content__rigth-block__item__list">
-                            <a target="_blank" class="footer__content__rigth-block__item__list__p">Media kit</a>
+                            <a href="https://www.figma.com/file/5VmgZUgUeomVAFILJqck1i/DeGuard-Media-Kit?type=design&node-id=0%3A1&mode=design&t=WAmEWziloxxfjDrk-1" target="_blank" class="footer__content__rigth-block__item__list__p">Media kit</a>
 
                             <a href="https://twitter.com/DeGuardVPN" target="_blank" class="footer__content__rigth-block__item__list__p">Twitter</a>
 
@@ -669,7 +660,7 @@
                     </div>
                     
                 </div>
-                <div class="footer__content__elipse"></div>
+                <!-- <div class="footer__content__elipse"></div> -->
             </div>
         </div>
     </footer>

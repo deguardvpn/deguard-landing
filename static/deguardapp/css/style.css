@@ -9,7 +9,6 @@
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
-
 html {
   line-height: 1.15;
   /* 1 */
@@ -723,6 +722,7 @@ table {
 
 .header {
   border-bottom: 1px solid #272727;
+  overflow: hidden;
 }
 
 .header__navigation {
@@ -1881,6 +1881,7 @@ table {
 
 .networks__cards__item:nth-child(1) > div {
   background: no-repeat url("../img/icons/HowItWorksIcons/tw.png");
+  background-size: cover;
 }
 
 .networks__cards__item:nth-child(2) > div {
@@ -2096,23 +2097,26 @@ table {
 
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 89px;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
+  z-index: 200;
   background-color: black;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 .mobile-menu.active {
-  z-index: 200;
-  visibility: visible;
-  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mobile-menu__wrapper {
@@ -2213,10 +2217,6 @@ h2,
 img {
   margin: 0;
   padding: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 a {
@@ -2394,7 +2394,65 @@ html {
 }
 
 .menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.menu-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.menu-btn span {
+  width: 26.67px;
+  height: 2.67px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #c5c5c5;
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translate(-50%) rotate(45deg);
+      -ms-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(1) {
   display: none;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  -webkit-transform: translate(-50%) rotate(-45deg);
+      -ms-transform: translate(-50%) rotate(-45deg);
+          transform: translate(-50%) rotate(-45deg);
 }
 
 .mark {
@@ -3167,6 +3225,12 @@ button {
   display: none;
 }
 
+@media (min-width: 947px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
 @media (min-width: 1281px) {
   .nft-plan__text-block .defautl_p {
     font-size: 18px;
@@ -3311,36 +3375,6 @@ button {
   }
 }
 
-@media (max-width: 960px) {
-  .menu__menu {
-    display: none;
-  }
-
-  .menu-btn {
-    position: relative;
-    z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    width: 24px;
-    height: 24px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .menu-btn__item {
-    height: 2px;
-    background-color: white;
-    width: 46px;
-  }
-}
-
 @media (max-width: 946px) {
   .header__navigation__row {
     -webkit-box-pack: end;
@@ -3361,6 +3395,10 @@ button {
     position: absolute;
     left: 40px;
     top: 20px;
+  }
+
+  .menu__menu {
+    display: none;
   }
 }
 
@@ -3430,7 +3468,7 @@ button {
 
   .header__supported-block {
     gap: 16px;
-    top: -40px;
+    top: -80px;
   }
 
   .header__supported-cnt {
@@ -3454,8 +3492,8 @@ button {
 
   .header__phones-img {
     position: static;
-    width: 142px;
-    height: 183px;
+    width: 250px;
+    height: 322px;
     left: auto;
     -webkit-transform: none;
         -ms-transform: none;
@@ -3553,6 +3591,10 @@ button {
 
   .block-title::before {
     width: 24px;
+  }
+
+  .mobile-menu {
+    top: 65px;
   }
 
   .card-anim {
