@@ -410,10 +410,8 @@ Math.easeInOutQuad = function (t, b, c, d) {
 }());
 
 document
-  .querySelectorAll('.menu-btn')
-  .forEach(el => {
-    el.addEventListener('click', () => mobileMenuHandler())
-  })
+  .querySelector('.menu-btn')
+  .addEventListener('click', (e) => mobileMenuHandler(e))  
 
 document
   .querySelector('.mobile-menu__menu')
